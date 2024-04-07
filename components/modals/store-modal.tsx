@@ -42,7 +42,7 @@ export const StoreModal = () => {
     try {
       setLoading(true);
       const response = await axios.post("/api/stores", values);
-      window.location.assign(`/${response.data.id}`);
+      window.location.assign(`/${response.data.id}`); //要重刷整個頁面
     } catch (error) {
       toast.error("Something went wrong");
     } finally {
